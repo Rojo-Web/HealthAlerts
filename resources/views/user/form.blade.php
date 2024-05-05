@@ -1,6 +1,6 @@
 <div class="row padding-1 p-1">
     <div class="col-md-12">
-        
+
         <div class="form-group mb-2 mb20">
             <label for="cedula" class="form-label">{{ __('Cedula') }}</label>
             <input type="text" name="cedula" class="form-control @error('cedula') is-invalid @enderror" value="{{ old('cedula', $user?->cedula) }}" id="cedula" placeholder="Cedula">
@@ -25,6 +25,29 @@
             <label for="rol_id" class="form-label">{{ __('Rol Id') }}</label>
             <input type="text" name="rol_id" class="form-control @error('rol_id') is-invalid @enderror" value="{{ old('rol_id', $user?->rol_id) }}" id="rol_id" placeholder="Rol Id">
             {!! $errors->first('rol_id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+        </div>
+
+        <!--Password-->
+        <div class="form-group mb-2 mb20">
+            <label for="password" class="form-label">{{ __('Password') }}</label>
+
+            <div class="form-group mb-2 mb20">
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password', $user?->password) }}" required autocomplete="new-password">
+
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+        </div>
+
+        <div class="form-group mb-2 mb20">
+            <label for="password-confirm" class="form-label">{{ __('Confirm Password') }}</label>
+
+            <div class="form-group mb-2 mb20">
+                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" value="{{ old('password', $user?->password) }}" required autocomplete="new-password">
+            </div>
         </div>
 
     </div>
