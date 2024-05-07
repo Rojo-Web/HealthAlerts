@@ -3,7 +3,8 @@
 @section('template_title')
     Pacientes
 @endsection
-
+@if (Auth::check())
+@if (Auth::user()->rol_id == "Admin")
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -35,7 +36,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 									<th >Cedula</th>
 									<th >Name</th>
 									<th >Celular</th>
@@ -48,7 +49,7 @@
                                     @foreach ($pacientes as $paciente)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 										<td >{{ $paciente->cedula }}</td>
 										<td >{{ $paciente->name }}</td>
 										<td >{{ $paciente->celular }}</td>
@@ -75,3 +76,13 @@
         </div>
     </div>
 @endsection
+@else
+@section('content')
+<h1 style="text-align: center; color:black;margin-top:300px;">No tienes permisos para entrar a esta pagina</h1>
+@endsection
+@endif
+@else
+@section('content')
+<h1 style="text-align: center; color:black;margin-top:300px;">No estas loguead@</h1>
+@endsection
+@endif
