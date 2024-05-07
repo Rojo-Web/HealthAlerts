@@ -17,7 +17,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('citas-pendientes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('citasPendientes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -35,7 +35,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 									<th >Paciente Id</th>
 									<th >Descripcion</th>
 									<th >Solicitud</th>
@@ -48,16 +48,16 @@
                                     @foreach ($citasPendientes as $citasPendiente)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 										<td >{{ $citasPendiente->paciente_id }}</td>
 										<td >{{ $citasPendiente->descripcion }}</td>
 										<td >{{ $citasPendiente->Solicitud }}</td>
 										<td >{{ $citasPendiente->fechaSolicitud }}</td>
 
                                             <td>
-                                                <form action="{{ route('citas-pendientes.destroy', $citasPendiente->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('citas-pendientes.show', $citasPendiente->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('citas-pendientes.edit', $citasPendiente->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                <form action="{{ route('citasPendientes.destroy', $citasPendiente->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('citasPendientes.show', $citasPendiente->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('citasPendientes.edit', $citasPendiente->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>

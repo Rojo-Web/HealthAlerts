@@ -71,9 +71,9 @@
                             <select id="rol_id" name="rol_id" class="form-select mt-1" required>
                                 <option value="Admin">Admin</option>
                             </select>
-                            @if($errors->has('rol'))
+                            @if($errors->has('rol_id'))
                             <div class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('rol') }}</strong>
+                                <strong>{{ $errors->first('rol_id') }}</strong>
                             </div>
                             @endif
                         </div>
