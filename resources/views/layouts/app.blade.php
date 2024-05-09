@@ -20,41 +20,45 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                    Home
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
                 </a>
-                <a class="navbar-brand" href="{{ url('/citasPendientes') }}">
-                    Citas pendientes
-                </a>
-                <a class="navbar-brand" href="{{ url('/proximasCitas') }}">
-                    Proximas Citas
-                </a>
-                <a class="navbar-brand" href="{{ url('/pacientes') }}">
-                    Pacientes
-                </a>
-                <a class="navbar-brand" href="{{ url('/registros') }}">
-                    Registros
-                </a>
-                <a class="navbar-brand" href="{{ url('/roles') }}">
-                    Roles
-                </a>
-                <a class="navbar-brand" href="{{ url('/users') }}">
-                    Usuarios
-                </a>
+        
+                <!-- Botón de hamburguesa para dispositivos pequeños -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+        
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
+                    <!-- Opciones de navegación -->
                     <ul class="navbar-nav me-auto">
-                        <!-- Puedes agregar elementos a la izquierda si lo deseas -->
+                        @auth
+                            <!-- Opciones para usuarios autenticados -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/citasPendientes') }}">Citas pendientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/proximasCitas') }}">Proximas Citas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/pacientes') }}">Pacientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/registros') }}">Registros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/roles') }}">Roles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/users') }}">Usuarios</a>
+                            </li>
+                        @endauth
                     </ul>
-
-                    <!-- Right Side Of Navbar -->
+        
+                    <!-- Opciones de usuario -->
                     <ul class="navbar-nav ms-auto">
-                        <!-- Verifica si el usuario está autenticado y si la ruta actual no es la de login -->
                         @guest
+                            <!-- Opciones para usuarios no autenticados -->
                             @if (Route::currentRouteName() == 'login')
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -65,19 +69,19 @@
                                 </li>
                             @endif
                         @else
-                            <!-- Si el usuario está autenticado, muestra su nombre y opción de logout -->
+                            <!-- Opciones para usuarios autenticados -->
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-
+        
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                        {{ __('Cerrar sesión') }}
                                     </a>
-
+        
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -88,6 +92,7 @@
                 </div>
             </div>
         </nav>
+        
 
         <main class="py-4">
             @yield('content')

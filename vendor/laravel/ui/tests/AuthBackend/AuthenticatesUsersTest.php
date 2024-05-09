@@ -139,7 +139,7 @@ class AuthenticatesUsersTest extends TestCase
         $this->assertInstanceOf(ValidationException::class, $response->exception);
         $this->assertSame([
             'email' => [
-                'These credentials do not match our records.',
+                'Estas credenciales no coinciden con nuestros registros.',
             ],
         ], $response->exception->errors());
     }
@@ -161,7 +161,7 @@ class AuthenticatesUsersTest extends TestCase
         $this->assertInstanceOf(ValidationException::class, $response->exception);
         $this->assertSame([
             'email' => [
-                'These credentials do not match our records.',
+                'Estas credenciales no coinciden con nuestros registros.',
             ],
         ], $response->exception->errors());
     }
