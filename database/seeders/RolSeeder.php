@@ -15,7 +15,7 @@ class RolSeeder extends Seeder
     {
         Role::create([
             'name' => 'Admin',
-            'permisos' => 'T',
+            'permisos' => 'Todos',
         ]);
     }
 }
