@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Proximas Citas') }}
+                                <strong>{{ __('Proximas Citas') }}</strong>
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('proximasCitas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create new') }}
+                                <a href="{{ route('proximasCitas.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
+                                  {{ __('Añadir proxima cita') }}
                                 </a>
                               </div>
                         </div>

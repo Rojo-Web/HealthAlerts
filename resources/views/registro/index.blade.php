@@ -13,13 +13,13 @@ Registros
                     <div style="display: flex; justify-content: space-between; align-items: center;">
 
                         <span id="card_title">
-                            {{ __('Registros') }}
+                            <strong>{{ __('Registros') }}</strong>
                         </span>
                         @if (Auth::check())
                         @if (Auth::user()->rol_id == "Admin")
                         <div class="float-right">
-                            <a href="{{ route('registros.create') }}" class="btn btn-primary btn-sm float-right" data-placement="left">
-                                {{ __('Create new') }}
+                            <a href="{{ route('registros.create') }}" class="btn btn-success btn-sm float-right" data-placement="left">
+                                {{ __('Crear registro') }}
                             </a>
                         </div>
                         @endif

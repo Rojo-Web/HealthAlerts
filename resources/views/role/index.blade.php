@@ -14,14 +14,14 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Roles') }}
+                                <strong>{{ __('Roles') }}</strong>
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('roles.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create new') }}
+                            <div class="float-right">
+                                <a href="{{ route('roles.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
+                                    {{ __('Crear rol') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))

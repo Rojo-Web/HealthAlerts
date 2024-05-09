@@ -13,14 +13,14 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Citas Pendientes') }}
+                                <strong>{{ __('Citas Pendientes') }}</strong>
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('citasPendientes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create new') }}
+                            <div class="float-right">
+                                <a href="{{ route('citasPendientes.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
+                                    {{ __('Crear Cita pendiente') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
