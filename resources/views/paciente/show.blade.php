@@ -38,7 +38,7 @@
                     </div>
                     <div class="form-group mb-2 mb20" style="display: inline-flex; gap:10px;">
                         <strong>Acciones:</strong>
-                        <a href="https://api.whatsapp.com/send?phone={{ $paciente->celular }}" class="btn btn-success btn-m" target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=57{{ $paciente->celular }}" class="btn btn-success btn-m" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                         <a href="mailto:{{ $paciente->email }}" class="btn btn-warning btn-m" target="_blank">

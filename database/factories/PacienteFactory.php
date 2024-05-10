@@ -24,7 +24,7 @@ class PacienteFactory extends Factory
         return [
             'cedula' => $this->faker->unique()->randomNumber(9),
             'name' => $this->faker->name,
-            'celular' => $this->faker->phoneNumber,
+            'celular' => '31' . $this->faker->numberBetween(1, 9) . $this->faker->randomNumber(7),
             'email' => $this->faker->unique()->safeEmail,
             'notas' => $this->faker->sentence,
         ];
