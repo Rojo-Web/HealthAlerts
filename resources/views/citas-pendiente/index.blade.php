@@ -62,7 +62,7 @@ Citas Pendientes
                                     <td>{{ $citasPendiente->solicitud }}</td>
                                     <td>{{ $citasPendiente->fechaSolicitud }}</td>
 
-                                    <td>
+                                    <td >
                                         <form action="{{ route('citasPendientes.destroy', $citasPendiente->id) }}" method="POST">
                                             <a class="btn btn-sm btn-primary " href="{{ route('citasPendientes.show', $citasPendiente->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Info') }}</a>
                                             @if (Auth::check())

@@ -14,7 +14,7 @@
                         <span class="card-title">{{ __('Crear') }} Cita Pendiente</span>
                     </div>
                     <div class="card-body bg-white">
-                        <form method="POST" action="{{ route('citas-pendientes.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('citasPendientes.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('citas-pendiente.form')

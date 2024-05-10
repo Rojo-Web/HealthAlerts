@@ -22,10 +22,15 @@
             {!! $errors->first('email', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="rol_id" class="form-label">{{ __('Rol Id') }}</label>
-            <input type="text" name="rol_id" class="form-control @error('rol_id') is-invalid @enderror" value="{{ old('rol_id', $user?->rol_id) }}" id="rol_id" placeholder="Rol Id">
+            <label for="rol_id" class="form-label">{{ __('Rol') }}</label>
+            <select name="rol_id" class="form-control @error('rol_id') is-invalid @enderror" id="rol_id">
+                <option value="" selected disabled>Elegir</option>
+                <option value="Admin" {{ old('rol_id', $user?->rol_id) === 'Admin' ? 'selected' : '' }}>Admin</option>
+                <option value="Empleado" {{ old('rol_id', $user?->rol_id) === 'Empleado' ? 'selected' : '' }}>Empleado</option>
+            </select>
             {!! $errors->first('rol_id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
+        
 
         <!--Password-->
         <div class="form-group mb-2 mb20">

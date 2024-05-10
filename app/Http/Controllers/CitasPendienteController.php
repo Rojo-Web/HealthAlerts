@@ -70,7 +70,7 @@ class CitasPendienteController extends Controller
     {
         $citasPendiente->update($request->validated());
 
-        return Redirect::route('citasPendientes.index')
+        return Redirect::route('citas-pendientes.index')
             ->with('success', 'CitasPendiente updated successfully');
     }
 
@@ -78,7 +78,7 @@ class CitasPendienteController extends Controller
     {
         CitasPendiente::find($id)->delete();
 
-        return Redirect::route('citasPendientes.index')
+        return Redirect::route('citas-pendientes.index')
             ->with('success', 'CitasPendiente deleted successfully');
     }
 
