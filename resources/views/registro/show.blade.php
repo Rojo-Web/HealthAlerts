@@ -19,10 +19,10 @@
                     </div>
 
                     <div class="card-body bg-white">
-                        
+
                                 <div class="form-group mb-2 mb20">
                                     <strong>Paciente Id:</strong>
-                                    {{ $registro->paciente_id }}
+                                    <a href="{{ route('pacientes.show', $registro->paciente_id) }}">{{ $registro->paciente_id }}</a>
                                 </div>
                                 <div class="form-group mb-2 mb20">
                                     <strong>Mediocomunicacion:</strong>

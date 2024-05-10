@@ -48,7 +48,11 @@ class PacienteController extends Controller
      */
     public function show($id): View
     {
+        if(strlen($id)>=5){
+            $paciente = Paciente::where('cedula', $id)->first();
+        }else{
         $paciente = Paciente::find($id);
+        }
 
         return view('paciente.show', compact('paciente'));
     }
