@@ -62,12 +62,13 @@ Citas Pendientes
                                     <td>{{ $citasPendiente->solicitud }}</td>
                                     <td>{{ $citasPendiente->fechaSolicitud }}</td>
 
-                                    <td>
+                                    <td >
                                         <form action="{{ route('citasPendientes.destroy', $citasPendiente->id) }}" method="POST">
-                                            <a class="btn btn-sm btn-primary " href="{{ route('citasPendientes.show', $citasPendiente->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                            <a class="btn btn-sm btn-primary " href="{{ route('citasPendientes.show', $citasPendiente->id) }}" style="margin-bottom: 10px;"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+
+                                            <a class="btn btn-sm btn-success" href="{{ route('citasPendientes.edit', $citasPendiente->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                             @if (Auth::check())
                                             @if (Auth::user()->rol_id == "Admin")
-                                            <a class="btn btn-sm btn-success" href="{{ route('citasPendientes.edit', $citasPendiente->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
