@@ -13,8 +13,12 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="solicitud" class="form-label">{{ __('Solicitud') }}</label>
-            <input type="text" name="Solicitud" class="form-control @error('Solicitud') is-invalid @enderror" value="{{ old('Solicitud', $citasPendiente?->Solicitud) }}" id="solicitud" placeholder="Solicitud">
-            {!! $errors->first('Solicitud', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+            <select name="solicitud" id="solicitud" class="form-select @error('solicitud') is-invalid @enderror">
+                <option value="" selected disabled>Elegir</option>
+                <option value="Modificar" {{ old('solicitud', $citasPendiente?->solicitud) === 'Modificar' ? 'selected' : '' }}>Modificar</option>
+                <option value="Cancelar" {{ old('solicitud', $citasPendiente?->solicitud) === 'Cancelar' ? 'selected' : '' }}>Cancelar</option>
+            </select>
+            {!! $errors->first('solicitud', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="fecha_solicitud" class="form-label">{{ __('Fechasolicitud') }}</label>

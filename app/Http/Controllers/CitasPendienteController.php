@@ -81,4 +81,5 @@ class CitasPendienteController extends Controller
         return Redirect::route('citasPendientes.index')
             ->with('success', 'CitasPendiente deleted successfully');
     }
+
 }

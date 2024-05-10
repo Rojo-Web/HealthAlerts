@@ -8,9 +8,15 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="medio_comunicacion" class="form-label">{{ __('Medio comunicación') }}</label>
-            <input type="text" name="medioComunicacion" class="form-control @error('medioComunicacion') is-invalid @enderror" value="{{ old('medioComunicacion', $registro?->medioComunicacion) }}" id="medio_comunicacion" placeholder="Medio comunicación">
+            <select name="medioComunicacion" id="medio_comunicacion" class="form-select @error('medioComunicacion') is-invalid @enderror">
+                <option value="" selected disabled>Elegir</option>
+                <option value="Correo electrónico" {{ old('medioComunicacion', $registro?->medioComunicacion) === 'Correo electrónico' ? 'selected' : '' }}>Correo electrónico</option>
+                <option value="WhatsApp" {{ old('medioComunicacion', $registro?->medioComunicacion) === 'WhatsApp' ? 'selected' : '' }}>WhatsApp</option>
+                <option value="Teléfono" {{ old('medioComunicacion', $registro?->medioComunicacion) === 'Teléfono' ? 'selected' : '' }}>Teléfono</option>
+            </select>
             {!! $errors->first('medioComunicacion', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
+        
         <div class="form-group mb-2 mb20">
             <label for="descripcion" class="form-label">{{ __('Descripción') }}</label>
             <input type="text" name="descripcion" class="form-control @error('descripcion') is-invalid @enderror" value="{{ old('descripcion', $registro?->descripcion) }}" id="descripcion" placeholder="Descripción">

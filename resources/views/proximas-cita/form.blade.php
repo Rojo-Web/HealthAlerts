@@ -13,7 +13,7 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="copago" class="form-label">{{ __('Copago') }}</label>
-            <input type="text" name="copago" class="form-control @error('copago') is-invalid @enderror" value="{{ old('copago', $proximasCita?->copago) }}" id="copago" placeholder="Copago">
+            <input type="number" name="copago" class="form-control @error('copago') is-invalid @enderror" value="{{ old('copago', $proximasCita?->copago) }}" id="copago" placeholder="Copago">
             {!! $errors->first('copago', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">

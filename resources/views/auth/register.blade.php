@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('template_title')
+¡Registrarme!
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -71,6 +74,7 @@
 
                             <div class="col-md-6">
                                 <select id="rol_id" name="rol_id" class="form-select mt-1" required>
+                                    <option value="" selected disabled>Elegir</option>
                                     <option value="Admin">Admin</option>
                                     <option value="Empleado">Empleado</option>
                                 </select>

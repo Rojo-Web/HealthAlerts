@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('template_title')
+Iniciar sesión
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

@@ -8,7 +8,12 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="permisos" class="form-label">{{ __('Permisos') }}</label>
-            <input type="text" name="permisos" class="form-control @error('permisos') is-invalid @enderror" value="{{ old('permisos', $role?->permisos) }}" id="permisos" placeholder="Permisos">
+            <select name="permisos" id="permisos" class="form-select @error('permisos') is-invalid @enderror" required>
+                <option value="" selected disabled>Elegir</option>
+                <option value="todos" {{ old('permisos', $role?->permisos) === 'todos' ? 'selected' : '' }}>Todos</option>
+                <option value="lectura" {{ old('permisos', $role?->permisos) === 'lectura' ? 'selected' : '' }}>Lectura</option>
+                <option value="escritura" {{ old('permisos', $role?->permisos) === 'escritura' ? 'selected' : '' }}>Escritura</option>
+            </select>
             {!! $errors->first('permisos', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
 
