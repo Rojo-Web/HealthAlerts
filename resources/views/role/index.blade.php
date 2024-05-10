@@ -7,7 +7,20 @@ Roles
 @if (Auth::user()->rol_id == "Admin")
 @section('content')
 <div class="container-fluid">
-    <div class="row">
+    <div class="row mt-3">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <span>
+                        <strong>¡Nota!</strong>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <p>Recuerda que el SuperAdministrador no puede ser borrado</p>
+                </div>
+            </div>
+        </div>
+        <hr>
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
