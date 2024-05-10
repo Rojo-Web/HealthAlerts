@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
 
         // Crear usuarios
         // Role::factory()->count(10)->create();
-        User::factory()->count(10)->create();
+        User::factory()->count(30)->create();
 
         // // Crear pacientes
         Paciente::factory()->count(50)->create();

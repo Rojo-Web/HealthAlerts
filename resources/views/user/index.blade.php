@@ -16,7 +16,10 @@ Users
                         <span id="card_title">
                             <strong>{{ __('Usuarios') }}</strong>
                         </span>
-
+                        <form action="{{ route('users.index') }}" method="GET" class="d-flex" role="search">
+                            <input class="form-control w-75  me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
                         <div class="float-right">
                             <a href="{{ route('users.create') }}" class="btn btn-success btn-sm float-right" data-placement="left">
                                 {{ __('Crear usuario') }}
@@ -41,12 +44,12 @@ Users
                                     <th>Nombre</th>
                                     <th>Celular</th>
                                     <th>Email</th>
-                                    <th>Rol Id</th>
+                                    <th>Rol</th>
 
                                     <th></th>
                                 </tr>
                             </thead>
-                            <!-- Mostrar enlaces de paginación -->
+                            <!-- Mostrar enlaces de paginación -->                            
                             <div style="display: flex; justify-content: flex-end; margin-bottom: 10px; padding-right: 10px; width: 100%;">
                                 @if ($users->previousPageUrl())
                                 <a href="{{ $users->previousPageUrl() }}"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">

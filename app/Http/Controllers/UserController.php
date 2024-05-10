@@ -17,11 +17,21 @@ class UserController extends Controller
      */
     public function index(Request $request): View
     {
-        $users = User::paginate();
+        $search = $request->query('search');
+        $usersQuery = User::query();
 
-        return view('user.index', compact('users'))
+        if ($search) {
+            $usersQuery->where('name', 'like', '%' . $search . '%')
+                ->orWhere('cedula', 'like', '%' . $search . '%')
+                ->orWhere('email', 'like', '%' . $search . '%');
+        }
+
+        $users = $usersQuery->paginate();
+
+        return view('user.index', compact('users', 'search'))
             ->with('i', ($request->input('page', 1) - 1) * $users->perPage());
     }
+
 
     /**
      * Show the form for creating a new resource.
