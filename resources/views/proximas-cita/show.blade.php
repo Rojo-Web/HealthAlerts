@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $proximasCita->name ?? __('Show') . " " . __('Proximas Cita') }}
+    {{ $proximasCita->name ?? __('Info') . " " . __('Proximas Cita') }}
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Proximas Cita</span>
+                            <span class="card-title">{{ __('Más información') }} Proximas Cita</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary btn-sm" href="{{ route('proximasCitas.index') }}"> {{ __('Back') }}</a>
@@ -25,7 +25,7 @@
                                     <a href="{{ route('pacientes.show', $proximasCita->paciente_id) }}">{{ $proximasCita->paciente_id }}</a>
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Descripcion:</strong>
+                                    <strong>Descripción:</strong>
                                     {{ $proximasCita->descripcion }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
@@ -33,7 +33,7 @@
                                     {{ $proximasCita->copago }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Fechacita:</strong>
+                                    <strong>Fecha cita:</strong>
                                     {{ $proximasCita->fechaCita }}
                                 </div>
 

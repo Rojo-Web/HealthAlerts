@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $role->name ?? __('Show') . " " . __('Role') }}
+    {{ $role->name ?? __('Info') . " " . __('Role') }}
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Role</span>
+                            <span class="card-title">{{ __('Más información') }} Role</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary btn-sm" href="{{ route('roles.index') }}"> {{ __('Back') }}</a>

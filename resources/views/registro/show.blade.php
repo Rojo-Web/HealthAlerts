@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $registro->name ?? __('Show') . " " . __('Registro') }}
+    {{ $registro->name ?? __('Info') . " " . __('Registro') }}
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Registro</span>
+                            <span class="card-title">{{ __('Más información') }} Registro</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary btn-sm" href="{{ route('registros.index') }}"> {{ __('Back') }}</a>
@@ -25,15 +25,15 @@
                                     <a href="{{ route('pacientes.show', $registro->paciente_id) }}">{{ $registro->paciente_id }}</a>
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Mediocomunicacion:</strong>
+                                    <strong>Medio comunicación:</strong>
                                     {{ $registro->medioComunicacion }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Descripcion:</strong>
+                                    <strong>Descripción:</strong>
                                     {{ $registro->descripcion }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Fecharegistro:</strong>
+                                    <strong>Fecha registro:</strong>
                                     {{ $registro->fechaRegistro }}
                                 </div>
 

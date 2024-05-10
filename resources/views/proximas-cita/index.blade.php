@@ -33,9 +33,9 @@ Proximas Citas
                                     <th>No</th>
 
                                     <th>Paciente Id</th>
-                                    <th>Descripcion</th>
+                                    <th>Descripción</th>
                                     <th>Copago</th>
-                                    <th>Fechacita</th>
+                                    <th>Fecha cita</th>
 
                                     <th></th>
                                 </tr>
@@ -66,13 +66,26 @@ Proximas Citas
 
                                     <td>
                                         <form action="{{ route('proximasCitas.destroy', $proximasCita->id) }}" method="POST">
-                                            <a class="btn btn-sm btn-primary " href="{{ route('proximasCitas.show', $proximasCita->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                            <a class="btn btn-sm btn-primary " href="{{ route('proximasCitas.show', $proximasCita->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Info') }}</a>
                                             @if (Auth::check())
                                             @if (Auth::user()->rol_id == "Admin")
-                                            <a class="btn btn-sm btn-success" href="{{ route('proximasCitas.edit', $proximasCita->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                            <a class="btn btn-sm btn-success" href="{{ route('proximasCitas.edit', $proximasCita->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault();
+                                            Swal.fire({
+                                                title: '¿Estás seguro?',
+                                                text: '¡No podrás revertir esto!',
+                                                icon: 'warning',
+                                                showCancelButton: true,
+                                                confirmButtonColor: '#3085d6',
+                                                cancelButtonColor: '#d33',
+                                                confirmButtonText: '¡Sí, eliminarlo!'
+                                            }).then((result) => {
+                                                if (result.isConfirmed) {
+                                                    this.closest('form').submit();
+                                                }
+                                            });"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                             @endif
                                             @endif
                                         </form>

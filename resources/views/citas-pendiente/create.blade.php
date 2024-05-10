@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ __('Create') }} Citas Pendiente
+    {{ __('Crear') }} Cita Pendiente
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Citas Pendiente</span>
+                        <span class="card-title">{{ __('Crear') }} Cita Pendiente</span>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('citas-pendientes.store') }}"  role="form" enctype="multipart/form-data">

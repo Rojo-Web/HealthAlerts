@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ __('Create') }} Registro
+    {{ __('Crear') }} Registro
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Registro</span>
+                        <span class="card-title">{{ __('Crear') }} Registro</span>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('registros.store') }}"  role="form" enctype="multipart/form-data">

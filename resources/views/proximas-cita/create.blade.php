@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ __('Create') }} Proximas Cita
+    {{ __('Crear') }} Proxima Cita
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Proximas Cita</span>
+                        <span class="card-title">{{ __('Crear') }} Proxima Cita</span>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('proximas-citas.store') }}"  role="form" enctype="multipart/form-data">
