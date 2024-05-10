@@ -17,8 +17,8 @@
             {!! $errors->first('descripcion', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="fecha_registro" class="form-label">{{ __('Fecharegistro') }}</label>
-            <input type="text" name="fechaRegistro" class="form-control @error('fechaRegistro') is-invalid @enderror" value="{{ old('fechaRegistro', $registro?->fechaRegistro) }}" id="fecha_registro" placeholder="Fecharegistro">
+            <label for="fecha_registro" class="form-label">{{ __('Fecha de Registro') }}</label>
+            <input type="text" name="fechaRegistro" class="form-control @error('fechaRegistro') is-invalid @enderror" value="{{ old('fechaRegistro', $registro?->fechaRegistro) }}" id="fecha_registro" placeholder="Fecha de Registro">
             {!! $errors->first('fechaRegistro', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
 

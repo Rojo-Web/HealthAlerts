@@ -61,7 +61,7 @@ Proximas Citas
 
                                     <td><a href="{{ route('pacientes.show', $proximasCita->paciente_id) }}">{{ $proximasCita->paciente_id }}</a></td>
                                     <td>{{ $proximasCita->descripcion }}</td>
-                                    <td>{{ $proximasCita->copago }}</td>
+                                    <td>${{ $proximasCita->copago }}</td>
                                     <td>{{ $proximasCita->fechaCita }}</td>
 
                                     <td>

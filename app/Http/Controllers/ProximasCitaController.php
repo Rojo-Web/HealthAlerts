@@ -39,7 +39,7 @@ class ProximasCitaController extends Controller
     {
         ProximasCita::create($request->validated());
 
-        return Redirect::route('proximas-citas.index')
+        return Redirect::route('proximasCitas.index')
             ->with('success', 'ProximasCita created successfully.');
     }
 
@@ -70,7 +70,7 @@ class ProximasCitaController extends Controller
     {
         $proximasCita->update($request->validated());
 
-        return Redirect::route('proximas-citas.index')
+        return Redirect::route('proximasCitas.index')
             ->with('success', 'ProximasCita updated successfully');
     }
 
@@ -78,7 +78,7 @@ class ProximasCitaController extends Controller
     {
         ProximasCita::find($id)->delete();
 
-        return Redirect::route('proximas-citas.index')
+        return Redirect::route('proximasCitas.index')
             ->with('success', 'ProximasCita deleted successfully');
     }
 }

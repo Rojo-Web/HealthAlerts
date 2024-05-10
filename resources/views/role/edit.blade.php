@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ __('Update') }} Role
+    {{ __('Actualizar') }} Role
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Update') }} Role</span>
+                        <span class="card-title">{{ __('Actualizar') }} Role</span>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('roles.update', $role->id) }}"  role="form" enctype="multipart/form-data">

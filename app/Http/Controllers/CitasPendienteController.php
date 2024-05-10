@@ -39,7 +39,7 @@ class CitasPendienteController extends Controller
     {
         CitasPendiente::create($request->validated());
 
-        return Redirect::route('citas-pendientes.index')
+        return Redirect::route('citas-pendiente.index')
             ->with('success', 'CitasPendiente created successfully.');
     }
 
@@ -70,7 +70,7 @@ class CitasPendienteController extends Controller
     {
         $citasPendiente->update($request->validated());
 
-        return Redirect::route('citas-pendientes.index')
+        return Redirect::route('citasPendientes.index')
             ->with('success', 'CitasPendiente updated successfully');
     }
 
@@ -78,7 +78,7 @@ class CitasPendienteController extends Controller
     {
         CitasPendiente::find($id)->delete();
 
-        return Redirect::route('citas-pendientes.index')
+        return Redirect::route('citasPendientes.index')
             ->with('success', 'CitasPendiente deleted successfully');
     }
 }

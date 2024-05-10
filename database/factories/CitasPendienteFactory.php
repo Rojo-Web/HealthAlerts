@@ -27,7 +27,7 @@ class CitasPendienteFactory extends Factory
                 return Paciente::factory()->create()->cedula;
             },
             'descripcion' => $this->faker->sentence,
-            'solicitud' => $this->faker->sentence,
+            'solicitud' => $this->faker->randomElement(['Modificar', 'Cancelar']),
             'fechaSolicitud' => $this->faker->dateTimeThisYear(),
         ];
     }

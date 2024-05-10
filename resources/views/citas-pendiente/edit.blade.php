@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ __('Update') }} Citas Pendiente
+    {{ __('Actualizar') }} Citas Pendiente
 @endsection
 
 @section('content')
@@ -11,10 +11,10 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Update') }} Citas Pendiente</span>
+                        <span class="card-title">{{ __('Actualizar') }} Citas Pendiente</span>
                     </div>
                     <div class="card-body bg-white">
-                        <form method="POST" action="{{ route('citas-pendientes.update', $citasPendiente->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('citasPendientes.update', $citasPendiente->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
