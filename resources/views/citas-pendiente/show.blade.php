@@ -14,7 +14,7 @@
                         <span class="card-title">{{ __('Más información') }} Citas Pendiente</span>
                     </div>
                     <div class="float-right">
-                        <a class="btn btn-primary btn-sm" href="{{ route('citasPendientes.index') }}"> {{ __('Back') }}</a>
+                        <a class="btn btn-primary btn-sm" href="{{ route('citasPendientes.index') }}"> {{ __('Volver') }}</a>
                     </div>
                 </div>
 

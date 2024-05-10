@@ -25,7 +25,7 @@
                         {{ $paciente->cedula }}
                     </div>
                     <div class="form-group mb-2 mb20">
-                        <strong>Name:</strong>
+                        <strong>Nombre:</strong>
                         {{ $paciente->name }}
                     </div>
                     <div class="form-group mb-2 mb20">

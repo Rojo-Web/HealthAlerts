@@ -14,7 +14,7 @@
                             <span class="card-title">{{ __('Más información') }} Proximas Cita</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('proximasCitas.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('proximasCitas.index') }}"> {{ __('Volver') }}</a>
                         </div>
                     </div>
 

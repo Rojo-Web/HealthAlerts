@@ -37,7 +37,7 @@ Roles
                                 <tr>
                                     <th>No</th>
 
-                                    <th>Name</th>
+                                    <th>Rol</th>
                                     <th>Permisos</th>
 
                                     <th></th>

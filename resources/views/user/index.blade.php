@@ -38,7 +38,7 @@ Users
                                     <th>No</th>
 
                                     <th>Cedula</th>
-                                    <th>Name</th>
+                                    <th>Nombre</th>
                                     <th>Celular</th>
                                     <th>Email</th>
                                     <th>Rol Id</th>

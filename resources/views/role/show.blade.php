@@ -14,14 +14,14 @@
                             <span class="card-title">{{ __('Más información') }} Role</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('roles.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('roles.index') }}"> {{ __('Volver') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body bg-white">
                         
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Name:</strong>
+                                    <strong>Rol:</strong>
                                     {{ $role->name }}
                                 </div>
                                 <div class="form-group mb-2 mb20">

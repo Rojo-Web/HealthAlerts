@@ -14,7 +14,7 @@
                             <span class="card-title">{{ __('Más información') }} User</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('users.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('users.index') }}"> {{ __('Volver') }}</a>
                         </div>
                     </div>
 
@@ -25,7 +25,7 @@
                                     {{ $user->cedula }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Name:</strong>
+                                    <strong>Nombre:</strong>
                                     {{ $user->name }}
                                 </div>
                                 <div class="form-group mb-2 mb20">

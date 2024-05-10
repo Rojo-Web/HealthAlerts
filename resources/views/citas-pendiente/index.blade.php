@@ -33,7 +33,7 @@ Citas Pendientes
                                     <th>Paciente Id</th>
                                     <th>Descripción</th>
                                     <th>Solicitud</th>
-                                    <th>Fechasolicitud</th>
+                                    <th>Fecha solicitud</th>
 
                                     <th></th>
                                 </tr>

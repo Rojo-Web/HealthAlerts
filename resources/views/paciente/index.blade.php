@@ -29,8 +29,8 @@ Pacientes
                             <thead class="thead">
                                 <tr>
                                     <th>No</th>
-                                    <th>Cedula</th>
-                                    <th>Name</th>
+                                    <th>Cédula</th>
+                                    <th>Nombre</th>
                                     <th>Celular</th>
                                     <th>Email</th>
                                     <th></th>
