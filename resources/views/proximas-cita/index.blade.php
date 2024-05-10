@@ -3,7 +3,7 @@
 @section('template_title')
     Proximas Citas
 @endsection
-
+@if (Auth::check())
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -75,3 +75,8 @@
         </div>
     </div>
 @endsection
+@else
+@section('content')
+<h1 style="text-align: center; color:black;margin-top:300px;">No estas loguead@</h1>
+@endsection
+@endif

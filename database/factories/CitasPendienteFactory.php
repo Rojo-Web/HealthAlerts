@@ -23,7 +23,9 @@ class CitasPendienteFactory extends Factory
     public function definition()
     {
         return [
-            'paciente_id' => Paciente::factory(), 
+            'paciente_id' => function () {
+                return Paciente::factory()->create()->cedula;
+            },
             'descripcion' => $this->faker->sentence,
             'solicitud' => $this->faker->sentence,
             'fechaSolicitud' => $this->faker->dateTimeThisYear(),

@@ -51,7 +51,7 @@
 
 										<td >{{ $citasPendiente->paciente_id }}</td>
 										<td >{{ $citasPendiente->descripcion }}</td>
-										<td >{{ $citasPendiente->Solicitud }}</td>
+										<td >{{ $citasPendiente->solicitud }}</td>
 										<td >{{ $citasPendiente->fechaSolicitud }}</td>
 
                                             <td>

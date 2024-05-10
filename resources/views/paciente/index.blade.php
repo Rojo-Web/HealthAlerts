@@ -4,7 +4,6 @@
     Pacientes
 @endsection
 @if (Auth::check())
-@if (Auth::user()->rol_id == "Admin")
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -36,12 +35,10 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-
-									<th >Cedula</th>
-									<th >Name</th>
-									<th >Celular</th>
-									<th >Email</th>
-
+                                        <th >Cedula</th>
+                                        <th >Name</th>
+                                        <th >Celular</th>
+                                        <th >Email</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -53,7 +50,9 @@
 										<td >{{ $paciente->cedula }}</td>
 										<td >{{ $paciente->name }}</td>
 										<td >{{ $paciente->celular }}</td>
-										<td >{{ $paciente->email }}</td>
+										<td>
+                                            <a href="mailto:{{ $paciente->email }}">{{ $paciente->email }}</a>
+                                        </td>                                       
 
                                             <td>
                                                 <form action="{{ route('pacientes.destroy', $paciente->id) }}" method="POST">
@@ -63,6 +62,9 @@
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
                                                 </form>
+                                                <a href="https://api.whatsapp.com/send?phone={{ $paciente->celular }}" class="btn btn-success btn-sm" target="_blank">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>                                                
                                             </td>
                                         </tr>
                                     @endforeach
@@ -76,11 +78,7 @@
         </div>
     </div>
 @endsection
-@else
-@section('content')
-<h1 style="text-align: center; color:black;margin-top:300px;">No tienes permisos para entrar a esta pagina</h1>
-@endsection
-@endif
+
 @else
 @section('content')
 <h1 style="text-align: center; color:black;margin-top:300px;">No estas loguead@</h1>

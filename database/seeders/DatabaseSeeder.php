@@ -21,18 +21,18 @@ class DatabaseSeeder extends Seeder
 
         // Crear usuarios
         // Role::factory()->count(10)->create();
-        // User::factory()->count(10)->create();
+        User::factory()->count(10)->create();
 
         // // Crear pacientes
         Paciente::factory()->count(50)->create();
 
         // // Crear registros
-        // Registro::factory()->count(100)->create();
+        Registro::factory()->count(100)->create();
 
         // // Crear citas pendientes
-        // CitasPendiente::factory()->count(20)->create();
+        CitasPendiente::factory()->count(20)->create();
 
         // // Crear próximas citas
-        // ProximasCita::factory()->count(30)->create();
+        ProximasCita::factory()->count(30)->create();
     }
 }

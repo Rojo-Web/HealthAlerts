@@ -23,7 +23,9 @@ class ProximasCitaFactory extends Factory
     public function definition()
     {
         return [
-            'paciente_id' => Paciente::factory(),
+            'paciente_id' => function () {
+                return Paciente::factory()->create()->cedula;
+            },
             'descripcion' => $this->faker->sentence,
             'copago' => $this->faker->randomFloat(2, 0, 1000),
             'fechaCita' => $this->faker->dateTimeThisMonth(), 

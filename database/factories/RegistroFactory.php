@@ -23,7 +23,9 @@ class RegistroFactory extends Factory
     public function definition()
     {
         return [
-            'paciente_id' => Paciente::factory(), 
+            'paciente_id' => function () {
+                return Paciente::factory()->create()->cedula;
+            },
             'medioComunicacion' => $this->faker->randomElement(['Teléfono', 'Correo electrónico', 'WhatsApp']),
             'descripcion' => $this->faker->sentence,
             'fechaRegistro' => $this->faker->dateTimeThisYear(),
