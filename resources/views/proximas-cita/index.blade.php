@@ -15,7 +15,10 @@ Proximas Citas
                         <span id="card_title">
                             <strong>{{ __('Proximas Citas') }}</strong>
                         </span>
-
+                        <form action="{{ route('proximasCitas.index') }}" method="GET" class="d-flex" role="search">
+                            <input class="form-control w-75  me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
 
                     </div>
                 </div>

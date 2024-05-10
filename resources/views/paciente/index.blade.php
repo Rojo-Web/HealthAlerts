@@ -15,6 +15,10 @@ Pacientes
                         <span id="card_title">
                             <strong>{{ __('Pacientes') }}</strong>
                         </span>
+                        <form action="{{ route('pacientes.index') }}" method="GET" class="d-flex" role="search">
+                            <input class="form-control w-75  me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
                     </div>
                 </div>
                 @if ($message = Session::get('success'))

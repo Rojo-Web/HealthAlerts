@@ -15,6 +15,10 @@ Registros
                         <span id="card_title">
                             <strong>{{ __('Registros') }}</strong>
                         </span>
+                        <form action="{{ route('registros.index') }}" method="GET" class="d-flex" role="search">
+                            <input class="form-control w-75  me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
                         @if (Auth::check())
                         @if (Auth::user()->rol_id == "Admin")
                         <div class="float-right">

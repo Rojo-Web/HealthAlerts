@@ -16,9 +16,19 @@ class RegistroController extends Controller
      */
     public function index(Request $request): View
     {
-        $registros = Registro::paginate();
+        $search = $request->query('search');
+        $registrosQuery = Registro::query();
 
-        return view('registro.index', compact('registros'))
+        if ($search) {
+            $registrosQuery->where('id', 'like', '%' . $search . '%')
+                ->orWhere('paciente_id', 'like', '%' . $search . '%')
+                ->orWhere('medioComunicacion', 'like', '%' . $search . '%')
+                ->orWhere('descripcion', 'like', '%' . $search . '%');
+        }
+
+        $registros = $registrosQuery->paginate();
+
+        return view('registro.index', compact('registros', 'search'))
             ->with('i', ($request->input('page', 1) - 1) * $registros->perPage());
     }
 

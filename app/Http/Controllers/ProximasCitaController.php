@@ -16,9 +16,20 @@ class ProximasCitaController extends Controller
      */
     public function index(Request $request): View
     {
-        $proximasCitas = ProximasCita::paginate();
+        $search = $request->query('search');
+        $proximasCitasQuery = ProximasCita::query();
 
-        return view('proximas-cita.index', compact('proximasCitas'))
+        if ($search) {
+            $proximasCitasQuery->where('id', 'like', '%' . $search . '%')
+                ->orWhere('paciente_id', 'like', '%' . $search . '%')
+                ->orWhere('descripcion', 'like', '%' . $search . '%')
+                ->orWhere('copago', 'like', '%' . $search . '%')
+                ->orWhere('fechaCita', 'like', '%' . $search . '%');
+        }
+
+        $proximasCitas = $proximasCitasQuery->paginate();
+
+        return view('proximas-cita.index', compact('proximasCitas', 'search'))
             ->with('i', ($request->input('page', 1) - 1) * $proximasCitas->perPage());
     }
 

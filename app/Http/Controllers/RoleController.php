@@ -16,9 +16,17 @@ class RoleController extends Controller
      */
     public function index(Request $request): View
     {
-        $roles = Role::paginate();
+        $search = $request->query('search');
+        $rolesQuery = Role::query();
 
-        return view('role.index', compact('roles'))
+        if ($search) {
+            $rolesQuery->where('name', 'like', '%' . $search . '%')
+                ->orWhere('permisos', 'like', '%' . $search . '%');
+        }
+
+        $roles = $rolesQuery->paginate();
+
+        return view('role.index', compact('roles', 'search'))
             ->with('i', ($request->input('page', 1) - 1) * $roles->perPage());
     }
 

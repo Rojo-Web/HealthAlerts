@@ -29,7 +29,10 @@ Roles
                         <span id="card_title">
                             <strong>{{ __('Roles') }}</strong>
                         </span>
-
+                        <form action="{{ route('roles.index') }}" method="GET" class="d-flex" role="search">
+                            <input class="form-control w-75  me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
                         <div class="float-right">
                             <a href="{{ route('roles.create') }}" class="btn btn-success btn-sm float-right" data-placement="left">
                                 {{ __('Crear rol') }}

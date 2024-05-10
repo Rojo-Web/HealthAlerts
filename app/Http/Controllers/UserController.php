@@ -26,7 +26,7 @@ class UserController extends Controller
                 ->orWhere('email', 'like', '%' . $search . '%');
         }
 
-        $users = $usersQuery->paginate();
+        $users = $usersQuery->paginate(20);
 
         return view('user.index', compact('users', 'search'))
             ->with('i', ($request->input('page', 1) - 1) * $users->perPage());

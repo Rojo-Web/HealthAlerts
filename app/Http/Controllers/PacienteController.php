@@ -16,9 +16,21 @@ class PacienteController extends Controller
      */
     public function index(Request $request): View
     {
-        $pacientes = Paciente::paginate();
+        $search = $request->query('search');
+        $pacientesQuery = Paciente::query();
 
-        return view('paciente.index', compact('pacientes'))
+        if ($search) {
+            $pacientesQuery->where('id', 'like', '%' . $search . '%')
+                ->orWhere('cedula', 'like', '%' . $search . '%')
+                ->orWhere('name', 'like', '%' . $search . '%')
+                ->orWhere('celular', 'like', '%' . $search . '%')
+                ->orWhere('email', 'like', '%' . $search . '%')
+                ->orWhere('notas', 'like', '%' . $search . '%');
+        }
+
+        $pacientes = $pacientesQuery->paginate();
+
+        return view('paciente.index', compact('pacientes', 'search'))
             ->with('i', ($request->input('page', 1) - 1) * $pacientes->perPage());
     }
 
