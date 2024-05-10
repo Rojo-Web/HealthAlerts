@@ -25,7 +25,7 @@ class PacienteRequest extends FormRequest
 			'cedula' => 'required|string',
 			'name' => 'required|string',
 			'celular' => 'string',
-			'email' => 'string',
+			'email' => ['required', 'email', 'regex:/@/'],
         ];
     }
 }

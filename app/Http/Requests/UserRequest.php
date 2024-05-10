@@ -25,7 +25,7 @@ class UserRequest extends FormRequest
 			'cedula' => 'required|string',
 			'name' => 'required|string',
 			'celular' => 'required|string',
-			'email' => 'required|string',
+			'email' => ['required', 'email', 'regex:/@/'],
 			'rol_id' => 'string',
         ];
     }
