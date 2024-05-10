@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('paciente_id')->nullable(); // Definición de la columna responsable_id
             $table->foreign('paciente_id')->references('cedula')->on('pacientes')->onDelete('cascade'); // Clave foránea responsable_id
             $table->string('descripcion')->nullable();
-            $table->string('Solicitud')->nullable();
+            $table->string('solicitud')->nullable();
             $table->timestamp('fechaSolicitud')->nullable();
             $table->timestamps();
         });

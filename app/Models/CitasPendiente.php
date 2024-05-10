@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
 
 /**
  * Class CitasPendiente
@@ -21,6 +23,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class CitasPendiente extends Model
 {
+    use HasFactory;
     
     protected $perPage = 20;
 

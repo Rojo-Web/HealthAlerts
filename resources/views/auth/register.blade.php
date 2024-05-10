@@ -72,6 +72,7 @@
                             <div class="col-md-6">
                                 <select id="rol_id" name="rol_id" class="form-select mt-1" required>
                                     <option value="Admin">Admin</option>
+                                    <option value="Empleado">Empleado</option>
                                 </select>
                                 @if($errors->has('rol_id'))
                                 <div class="invalid-feedback" role="alert">

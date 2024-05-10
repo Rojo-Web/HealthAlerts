@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
-                <img src="{{ asset('assets/img/logo.png') }}" alt="Logo de {{ config('app.name', 'Laravel') }}s" class="img-fluid" style="max-height: 250px; height:100%;">
+                <img src="{{ asset('/images/slogan.png') }}" alt="Logo de {{ config('app.name', 'Laravel') }}" class="img-fluid" style="max-height: 250px; height:100%;">
             </div>
             
             <div class="col-md-4">

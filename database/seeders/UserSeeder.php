@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'celular' => '00000000',
             'email' => 'admin@gmail.com',
             'password' => '123456789',
-            'rol_id' => '1'
+            'rol_id' => 'Admin'
         ]);
     }
 }

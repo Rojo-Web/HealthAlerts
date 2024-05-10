@@ -17,5 +17,10 @@ class RolSeeder extends Seeder
             'name' => 'Admin',
             'permisos' => 'Todos',
         ]);
+        
+        Role::create([
+            'name' => 'Empleado',
+            'permisos' => 'Consultar',
+        ]);
     }
 }

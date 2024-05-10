@@ -20,19 +20,19 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
 
         // Crear usuarios
-        Role::factory()->count(10)->create();
-        User::factory()->count(10)->create();
+        // Role::factory()->count(10)->create();
+        // User::factory()->count(10)->create();
 
-        // Crear pacientes
+        // // Crear pacientes
         Paciente::factory()->count(50)->create();
 
-        // Crear registros
-        Registro::factory()->count(100)->create();
+        // // Crear registros
+        // Registro::factory()->count(100)->create();
 
-        // Crear citas pendientes
-        CitasPendiente::factory()->count(20)->create();
+        // // Crear citas pendientes
+        // CitasPendiente::factory()->count(20)->create();
 
-        // Crear próximas citas
-        ProximasCita::factory()->count(30)->create();
+        // // Crear próximas citas
+        // ProximasCita::factory()->count(30)->create();
     }
 }

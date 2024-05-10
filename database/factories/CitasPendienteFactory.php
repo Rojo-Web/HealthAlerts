@@ -25,7 +25,7 @@ class CitasPendienteFactory extends Factory
         return [
             'paciente_id' => Paciente::factory(), 
             'descripcion' => $this->faker->sentence,
-            'Solicitud' => $this->faker->sentence,
+            'solicitud' => $this->faker->sentence,
             'fechaSolicitud' => $this->faker->dateTimeThisYear(),
         ];
     }

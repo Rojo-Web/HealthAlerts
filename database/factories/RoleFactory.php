@@ -23,12 +23,11 @@ class RoleFactory extends Factory
     public function definition()
     {
         $roles = ['Admin', 'Empleado'];
-        $permisos = ["Lectura", "Escritura", "Administración", "Solo_Lectura", "Todos"];
+        $permisos = ["Lectura", "Escritura", "Todos"];
 
         return [
             'name' => $this->faker->unique()->randomElement($roles),
             'permisos' => $this->faker->randomElement($permisos),
-
         ];
 
     }

@@ -24,6 +24,10 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $roleName = 'nombre_del_rol'; // Reemplaza 'nombre_del_rol' por el nombre real del rol que deseas asignar
+        
+        $role = Role::where('name', $roleName)->firstOrFail();
+
         return [
             'cedula' => $this->faker->unique()->randomNumber(9),
             'name' => $this->faker->name,
@@ -31,7 +35,7 @@ class UserFactory extends Factory
             'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
             'password' => bcrypt('password'),
-            'rol_id' => Role::factory(),
+            'rol_id' => $role->name,
             'remember_token' => Str::random(10),
         ];
     }
