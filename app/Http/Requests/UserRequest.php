@@ -27,8 +27,16 @@ class UserRequest extends FormRequest
 			'celular' => 'required|string',
 			'email' => ['required', 'email', 'regex:/@/'],
 			'rol_id' => 'string',
-            'password' => 'required|string|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/',
-
+            'password' => [
+                'required',
+                'string',
+                'min:8',
+                function ($attribute, $value, $fail) {
+                    if (!preg_match('/[a-z]/', $value) || !preg_match('/[A-Z]/', $value) || !preg_match('/\d/', $value)) {
+                        $fail('La contraseña debe contener al menos una letra mayúscula, una letra minúscula y al menos un número.');
+                    }
+                },
+            ],
         ];
     }
 }

@@ -45,9 +45,9 @@
                 @guest
                 <!-- Opciones para usuarios no autenticados -->
                 @if (Route::currentRouteName() == 'login')
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
-                </li>
+                </li> --}}
                 @else
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
