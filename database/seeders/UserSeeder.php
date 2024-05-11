@@ -21,5 +21,13 @@ class UserSeeder extends Seeder
             'password' => '123456789',
             'rol_id' => 'Admin'
         ]);
+        User::create([
+            'cedula' => '222222',
+            'name' => 'empleado',
+            'celular' => '111111111',
+            'email' => 'empleado@gmail.com',
+            'password' => '123456789',
+            'rol_id' => 'Empleado'
+        ]);
     }
 }

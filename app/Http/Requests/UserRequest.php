@@ -22,11 +22,13 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'cedula' => 'required|string',
+			'cedula' => 'required|string|min:8',
 			'name' => 'required|string',
 			'celular' => 'required|string',
 			'email' => ['required', 'email', 'regex:/@/'],
 			'rol_id' => 'string',
+            'password' => 'required|string|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/',
+
         ];
     }
 }

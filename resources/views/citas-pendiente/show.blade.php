@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group mb-2 mb20">
                         <strong>Solicitud:</strong>
-                        {{ $citasPendiente->Solicitud }}
+                        {{ $citasPendiente->solicitud }}
                     </div>
                     <div class="form-group mb-2 mb20">
                         <strong>Fechasolicitud:</strong>
