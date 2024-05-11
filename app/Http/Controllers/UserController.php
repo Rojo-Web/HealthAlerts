@@ -9,6 +9,9 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
+
 
 class UserController extends Controller
 {
@@ -48,6 +51,21 @@ class UserController extends Controller
      */
     public function store(UserRequest $request): RedirectResponse
     {
+
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
+            'cedula' => 'required|string|max:255',
+            'rol_id' => 'required|string|max:255',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                            ->withErrors($validator)
+                            ->withInput();
+        }
         // User::create($request->validated());
         $user = new User();
         $user->name = $request->name;
@@ -87,6 +105,20 @@ class UserController extends Controller
     public function update(UserRequest $request, $id): RedirectResponse
     {
         // $user->update($request->validated());
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255',
+            'cedula' => 'required|string|max:255',
+            'rol_id' => 'required|string|max:255',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                            ->withErrors($validator)
+                            ->withInput();
+        }
 
         $user = User::find($id);
         $user->cedula = $request->cedula;

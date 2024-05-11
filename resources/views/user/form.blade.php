@@ -30,7 +30,7 @@
             </select>
             {!! $errors->first('rol_id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
-        
+
 
         <!--Password-->
         <div class="form-group mb-2 mb20">
@@ -51,7 +51,7 @@
             <label for="password-confirm" class="form-label">{{ __('Confirm Password') }}</label>
 
             <div class="form-group mb-2 mb20">
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" value="{{ old('password', $user?->password) }}" required autocomplete="new-password">
+                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
             </div>
         </div>
 
