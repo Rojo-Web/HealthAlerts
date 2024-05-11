@@ -85,7 +85,7 @@ Roles
                                         <form action="{{ route('roles.destroy', $role->id) }}" method="POST">
                                             <a class="btn btn-sm btn-primary " href="{{ route('roles.show', $role->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Info') }}</a>
                                             <a class="btn btn-sm btn-success" href="{{ route('roles.edit', $role->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
-                                            @csrf
+                                            {{-- @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault();
                                             Swal.fire({
@@ -100,7 +100,7 @@ Roles
                                                 if (result.isConfirmed) {
                                                     this.closest('form').submit();
                                                 }
-                                            });"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
+                                            });"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button> --}}
                                         </form>
                                     </td>
                                 </tr>
