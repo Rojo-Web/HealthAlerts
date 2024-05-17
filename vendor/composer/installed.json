@@ -26,7 +26,7 @@
             },
             "time": "2024-01-28T17:52:47+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "ArchTech\\Enums\\": "src/"
@@ -213,7 +213,7 @@
                     "dev-main": "3.x-dev"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Composer\\Semver\\": "src"
@@ -550,7 +550,7 @@
             },
             "time": "2024-03-11T20:15:12+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "DragonCode\\Contracts\\": "src"
@@ -621,7 +621,7 @@
             },
             "time": "2023-06-02T11:37:44+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "DragonCode\\PrettyArray\\": "src"
@@ -722,7 +722,7 @@
                     }
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "DragonCode\\Support\\": "src"
@@ -1768,7 +1768,7 @@
                     ]
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\Actions\\": "src/"
@@ -1838,7 +1838,7 @@
                     ]
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\Attributes\\": "src/"
@@ -1909,7 +1909,7 @@
             },
             "time": "2024-03-22T18:25:34+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -1996,7 +1996,7 @@
                     ]
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\HttpStatuses\\": "src"
@@ -2058,7 +2058,7 @@
             },
             "time": "2024-03-13T09:18:03+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\JsonFallback\\": "src"
@@ -2123,7 +2123,7 @@
                     ]
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\Lang\\": "src/"
@@ -2173,7 +2173,7 @@
             },
             "time": "2024-01-17T08:34:28+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\LocaleList\\": "src/"
@@ -2252,7 +2252,7 @@
                     ]
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\Locales\\": "src/"
@@ -2320,7 +2320,7 @@
             },
             "time": "2024-03-13T09:34:55+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\NativeCountryNames\\": "src/"
@@ -2395,7 +2395,7 @@
             },
             "time": "2024-03-13T09:40:02+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\NativeCurrencyNames\\": "src/"
@@ -2465,7 +2465,7 @@
             },
             "time": "2024-03-13T09:28:19+00:00",
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\NativeLocaleNames\\": "src/"
@@ -2551,7 +2551,7 @@
                     ]
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "LaravelLang\\Publisher\\": "src/"
@@ -8648,7 +8648,7 @@
                     "url": "https://github.com/symfony/polyfill"
                 }
             },
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "bootstrap.php"
