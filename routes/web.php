@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\PoliticasController;
+use App\Http\Controllers\PqrsController;
 use App\Http\Controllers\ReportesController;
 use App\Mail\ResetPasswordMailable;
 use Illuminate\Support\Facades\Auth;
@@ -34,3 +36,6 @@ Route::group(['prefix' => 'export'], function () {
 });
 
 Route::get('/generate-pdf', [PDFController::class, 'generatePDF']);
+
+Route::get('/pqrs', PqrsController::class)->name('pqrs');
+Route::get('/politica-de-privacidad', PoliticasController::class)->name('politicas');

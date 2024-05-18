@@ -69,6 +69,12 @@
                                             document.getElementById('logout-form').submit();">
                             {{ __('Backup') }}
                         </a> --}}
+                        <a class="dropdown-item" href="{{ route('politicas')}}">
+                            {{ __('Politicas de privacidad') }}
+                        </a>
+                        <a class="dropdown-item" href="{{ route('pqrs')}}">
+                            {{ __('PQRS') }}
+                        </a>
                         <a class="dropdown-item" href="{{ route('reportes') }}">
                             {{ __('Reportes') }}
                         </a>

@@ -11,12 +11,10 @@
                 <p>Correo electrónico: <a href="mailto:healthalerts@gmail.com">healthalerts@gmail.com</a></p>
             </div>
             <div class="col-md-4">
-                <h5>Sobre Nosotros</h5>
+                <h5>Más Información</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Contáctanos</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                    <li><a href="#">Políticas de privacidad</a></li>
-                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="{{ route('politicas')}}">Políticas de privacidad</a></li>
+                    <li><a href="{{route('pqrs')}}">PQRS</a></li>
                 </ul>
             </div>
         </div>
