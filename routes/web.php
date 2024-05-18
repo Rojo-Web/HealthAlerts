@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PDFController;
 use App\Http\Controllers\ReportesController;
 use App\Mail\ResetPasswordMailable;
 use Illuminate\Support\Facades\Auth;
@@ -31,3 +32,5 @@ Route::group(['prefix' => 'export'], function () {
     Route::get('roles/{format}', [ReportesController::class, 'exportRoles'])->name('export.roles');
     Route::get('users/{format}', [ReportesController::class, 'exportUsers'])->name('export.users');
 });
+
+Route::get('/generate-pdf', [PDFController::class, 'generatePDF']);
