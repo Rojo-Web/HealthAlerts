@@ -14,7 +14,7 @@
                 <h5>Más Información</h5>
                 <ul class="list-unstyled">
                     <li><a href="{{ route('politicas')}}">Políticas de privacidad</a></li>
-                    <li><a href="{{route('pqrs')}}">PQRS</a></li>
+                    <li><a href="{{ route('pqrs.index')}}">PQRS</a></li>
                 </ul>
             </div>
         </div>

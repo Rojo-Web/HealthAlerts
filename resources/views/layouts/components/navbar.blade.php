@@ -72,7 +72,7 @@
                         <a class="dropdown-item" href="{{ route('politicas')}}">
                             {{ __('Politicas de privacidad') }}
                         </a>
-                        <a class="dropdown-item" href="{{ route('pqrs')}}">
+                        <a class="dropdown-item" href="{{ route('pqrs.index')}}">
                             {{ __('PQRS') }}
                         </a>
                         <a class="dropdown-item" href="{{ route('reportes') }}">

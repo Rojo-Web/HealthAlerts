@@ -37,5 +37,7 @@ Route::group(['prefix' => 'export'], function () {
 
 Route::get('/generate-pdf', [PDFController::class, 'generatePDF']);
 
-Route::get('/pqrs', PqrsController::class)->name('pqrs');
+Route::get('/pqrs', [PqrsController::class, 'index'])->name('pqrs.index');
+Route::post('/pqrs', [PqrsController::class, 'store'])->name('pqrs.store');
+
 Route::get('/politica-de-privacidad', PoliticasController::class)->name('politicas');
