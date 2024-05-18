@@ -25,6 +25,10 @@ class ReportesController extends Controller
         return view('reportes.index');
     }
 
+    public function backup()
+    {
+        return view('backup.index');
+    }
     public function exportCitasPendientes($format)
     {
         $export = new CitasPendientesExport;

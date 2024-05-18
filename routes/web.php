@@ -24,7 +24,7 @@ Route::resource('citasPendientes', App\Http\Controllers\CitasPendienteController
 Route::resource('registros', App\Http\Controllers\RegistroController::class);
 
 Route::get('/reportes', ReportesController::class)->name('reportes');
-
+Route::get('/backup', [ReportesController::class,'backup'])->name('backup');
 
 Route::group(['prefix' => 'export'], function () {
     Route::get('citas-pendientes/{format}', [ReportesController::class, 'exportCitasPendientes'])->name('export.citas_pendientes');

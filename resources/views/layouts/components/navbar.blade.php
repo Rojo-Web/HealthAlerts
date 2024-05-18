@@ -78,6 +78,13 @@
                         <a class="dropdown-item" href="{{ route('reportes') }}">
                             {{ __('Reportes') }}
                         </a>
+                        @if (Auth::check())
+                        @if (Auth::user()->rol_id == "Admin")
+                        <a class="dropdown-item" href="{{ route('backup') }}">
+                            {{ __('Backups') }}
+                        </a>
+                        @endif
+                        @endif
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                             {{ __('Cerrar Sesión') }}
